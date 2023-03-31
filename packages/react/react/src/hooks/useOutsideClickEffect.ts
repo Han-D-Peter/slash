@@ -11,7 +11,7 @@ type OneOrMore<T> = T | T[];
  * ```ts
  * const ref = useRef<HTMLElement>(null);
  *
- * useOutsideClickEffect(ref, () => {
+ * useOutsideClickEffect(ref.current, () => {
  *   console.log('outside clicked!');
  * });
  * ```
@@ -21,7 +21,7 @@ type OneOrMore<T> = T | T[];
  * const ref1 = useRef<HTMLElement>(null);
  * const ref2 = useRef<HTMLElement>(null);
  *
- * useOutsideClickEffect([ref1, ref2], () => {
+ * useOutsideClickEffect([ref1.current, ref2.current], () => {
  *   console.log('outside clicked!');
  * });
  * ```
